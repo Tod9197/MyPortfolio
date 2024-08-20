@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+/* Set core root defaults */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+figure,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+img {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  font-size: 100%;
+  text-decoration: none;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+html {
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 62.5%;
+  margin-top: 0 !important;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: #000000;
+  font-family: "Noto Sans JP", "Noto Sans Japanese", YuGothic, "Yu Gothic",
+    "ヒラギノ角ゴシック", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3", sans-serif;
+  letter-spacing: 0.08em;
+}

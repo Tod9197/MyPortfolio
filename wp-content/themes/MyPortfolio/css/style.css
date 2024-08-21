@@ -1,6 +1,306 @@
-.horse {
-  width: 300px;
-  height: 330px;
-  object-fit: cover;
+/* ============================================================ */
+/* 共通パーツ */
+/* インナー */
+.inner {
+  width: 100%;
+  max-width: 1140px;
   margin: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
+
+/* ============================================================ */
+/* トップページ */
+/* メインビジュアル */
+.mainVisual {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(../img/programming01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+.mainVisual::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #040831;
+  opacity: 0.6;
+  z-index: 200;
+}
+
+/* ============================================================ */
+/* 制作一覧 */
+.works {
+  padding: 15rem 0;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 30rem;
+}
+.works::before {
+  width: 100%;
+  position: absolute;
+  display: inline-block;
+  content: "Works 制作一覧　Web Site　Web Application　Corporate Site Works 制作一覧  Web Site Web Application Corporate Site Works 制作一覧  Web Site Web Application Corporate Site";
+  font-size: 9rem;
+  font-weight: bold;
+  color: #fff;
+  top: 2rem;
+  text-align: center;
+  -webkit-text-stroke: 1px #87cefa; /* 文字の外側の線を黒に設定 */
+  background-color: transparent; /* 背景色を透明に設定 */
+  z-index: -1;
+  white-space: nowrap;
+  animation: marquee 60s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.worksTitle {
+  font-size: 7rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.worksTitle::before {
+  content: "";
+  width: 10%;
+  height: 1px;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  position: absolute;
+}
+.worksTitle::after {
+  font-size: 2.4rem;
+  content: "制作実績";
+  position: absolute;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ============================================================ */
+/* 制作詳細ページ */
+/* 制作詳細 メインビジュアル */
+.mainVisual.-worksDetail {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  background-image: url(../img/programming02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+.mainVisual.-worksDetail::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #040831;
+  opacity: 0.3;
+  z-index: 200;
+}
+
+.worksDetail {
+  padding: 10rem 0;
+  /* background-image: url(../img/paper-03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+.worksDetail__title {
+  position: relative;
+  font-family: cursive;
+  font-size: 7rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  top: 40%;
+  text-align: center;
+  z-index: 3000;
+  text-shadow: 2px 2px 2px #000;
+}
+.worksDetail__title::after {
+  position: absolute;
+  content: "制作実績";
+  font-size: 2.4rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  bottom: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.worksDetail__subTitle {
+  color: #87cefa;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-bottom: 2.4rem;
+}
+.worksDetail__flex {
+  display: flex;
+  align-items: center;
+}
+.worksDetail__link {
+  display: block;
+  color: #87cefa;
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+}
+.worksDetail__link:hover {
+  opacity: 0.8;
+}
+.worksDetail__text {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+}
+.worksDetail__photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 5rem;
+}
+.worksDetail__photosLink {
+  overflow: hidden;
+}
+.worksDetail__photosLink {
+  transition: all 0.5s;
+  border: 1px solid #333;
+}
+.worksDetail__photosItem {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 200/150;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+.worksDetail__photosItem:hover {
+  transform: scale(1.05);
+}
+.worksDetail__description {
+  color: #333;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 4rem;
+  line-height: 1.8;
+  position: relative;
+  text-indent: -1.5rem;
+  padding-left: 1.5rem;
+}
+.worksDetail__description.-lang {
+  margin-bottom: 1rem;
+}
+.worksDetail__description::before {
+  content: "";
+  border-left: 5px solid #87cefa;
+  margin-right: 0.5em;
+}
+.worksDetail__fontbold {
+  color: #000;
+  font-weight: bold;
+}
+.worksDetail__toolFlex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.worksDetail__tool {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  width: 100px;
+  color: #fff;
+  background-color: #87cefa;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  line-height: 1.8;
+}
+
+/* ============================================================ */
+/* スキルセクション */
+.skills {
+  padding: 15rem 0;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.skills::before {
+  width: 100%;
+  position: absolute;
+  display: inline-block;
+  content: "FrontEnd　BackEnd　Sever　Web Design";
+  font-size: 9rem;
+  font-weight: bold;
+  color: #fff;
+  top: 2rem;
+  text-align: center;
+  -webkit-text-stroke: 1px #87cefa; /* 文字の外側の線を黒に設定 */
+  background-color: transparent; /* 背景色を透明に設定 */
+  z-index: -1;
+  white-space: nowrap;
+  animation: marquee 60s linear infinite;
+}
+
+.skillsTitle {
+  font-size: 7rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+.skillsTitle::before {
+  content: "";
+  width: 10%;
+  height: 1px;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  position: absolute;
+}
+.skillsTitle::after {
+  font-size: 2.4rem;
+  content: "スキル";
+  position: absolute;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skillsList {
+  display: flex;
+  margin-top: 10rem;
+}
+.skillsList__item {
+  width: 100px;
+  height: auto;
+}
+/* ============================================================ */

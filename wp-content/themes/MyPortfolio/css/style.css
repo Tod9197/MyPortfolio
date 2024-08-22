@@ -2,7 +2,6 @@
 /* 共通パーツ */
 /* インナー */
 .inner {
-  width: 100%;
   max-width: 1140px;
   margin: auto;
   padding-right: 1rem;
@@ -158,53 +157,54 @@
   transform: translateX(-50%);
 }
 .worksDetail__subTitle {
-  color: #87cefa;
+  color: #088ee1;
   font-size: 3rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   text-align: left;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
+}
+.worksDetail__category {
+  margin-bottom: 3rem;
+}
+.worksDetail__category a {
+  display: inline;
+  font-size: 1.2rem;
+  pointer-events: none;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  background-color: #088ee1;
+  border-radius: 20px;
+}
+.worksDetail__link {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: #088ee1;
+}
+.worksDetail__link:hover {
+  opacity: 0.7;
 }
 .worksDetail__flex {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  margin-bottom: 7rem;
 }
-.worksDetail__link {
-  display: block;
-  color: #87cefa;
-  font-size: 1.8rem;
-  margin-bottom: 5rem;
+.worksDetail__subTitlePart {
+  width: 100%;
+  margin-bottom: 4rem;
 }
-.worksDetail__link:hover {
+.worksDetail__photosLink {
+  width: 100%;
+  margin: auto;
+}
+.worksDetail__photosLink:hover {
   opacity: 0.8;
-}
-.worksDetail__text {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 2rem;
-  letter-spacing: 0.1em;
-}
-.worksDetail__photos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-bottom: 5rem;
-}
-.worksDetail__photosLink {
-  overflow: hidden;
-}
-.worksDetail__photosLink {
-  transition: all 0.5s;
-  border: 1px solid #333;
 }
 .worksDetail__photosItem {
   width: 100%;
   height: auto;
-  aspect-ratio: 200/150;
-  object-fit: cover;
+  aspect-ratio: 200/100;
+  object-fit: contain;
   transition: all 0.3s;
-}
-.worksDetail__photosItem:hover {
-  transform: scale(1.05);
 }
 .worksDetail__description {
   color: #333;
@@ -216,33 +216,34 @@
   text-indent: -1.5rem;
   padding-left: 1.5rem;
 }
-.worksDetail__description.-lang {
-  margin-bottom: 1rem;
-}
 .worksDetail__description::before {
   content: "";
-  border-left: 5px solid #87cefa;
+  border-left: 10px solid #87cefa;
   margin-right: 0.5em;
 }
 .worksDetail__fontbold {
   color: #000;
   font-weight: bold;
 }
-.worksDetail__toolFlex {
+.worksDetail__tagsList {
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
-.worksDetail__tool {
-  display: block;
-  text-align: center;
+.worksDetail__tagsItem {
   font-size: 1.4rem;
-  width: 100px;
+  padding: 1rem 1.5rem;
   color: #fff;
-  background-color: #87cefa;
-  padding: 0.5rem 1.5rem;
+  background-color: #088ee1;
+  margin-right: 1rem;
   border-radius: 20px;
-  line-height: 1.8;
+}
+.worksDetail__tagsItem.xd {
+  background-color: #ff0000; /* 例: スラッグが 'example1' の場合の背景色 */
+}
+.worksDetail__tagsItem.wordpress {
+  background-color: #50c878;
+}
+.worksDetail__tagsItem.php {
+  background-color: #9915d2;
 }
 
 /* ============================================================ */

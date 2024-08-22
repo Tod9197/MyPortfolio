@@ -9,7 +9,7 @@ get_header();
 
 <!-- メインビジュアル -->
 <section class="mainVisual -worksDetail">
-  <h2 class="worksDetail__title">Works Detail</h2>
+  <h2 class="worksDetail__title">Works</h2>
 </section>
 
 <!-- 詳細 -->

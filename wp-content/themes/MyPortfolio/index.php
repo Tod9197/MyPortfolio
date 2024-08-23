@@ -20,7 +20,6 @@
 
   <ul class="skillsList">
     <li class="skillsList__item">
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/php-icon.png')) ?>" alt="">
     </li>
   </ul>
 </div>

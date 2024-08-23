@@ -2,7 +2,7 @@
 /* 共通パーツ */
 /* インナー */
 .inner {
-  max-width: 1140px;
+  max-width: 1180px;
   margin: auto;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -130,15 +130,11 @@
 
 .worksDetail {
   padding: 10rem 0;
-  /* background-image: url(../img/paper-03.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
 }
 .worksDetail__title {
   position: relative;
   font-family: cursive;
-  font-size: 7rem;
+  font-size: 9rem;
   color: #fff;
   letter-spacing: 0.1em;
   top: 40%;
@@ -149,10 +145,10 @@
 .worksDetail__title::after {
   position: absolute;
   content: "制作実績";
-  font-size: 2.4rem;
+  font-size: 3rem;
   color: #fff;
   letter-spacing: 0.1em;
-  bottom: -4rem;
+  bottom: -5rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -210,7 +206,7 @@
   color: #333;
   font-size: 1.8rem;
   letter-spacing: 0.1em;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   line-height: 1.8;
   position: relative;
   text-indent: -1.5rem;
@@ -221,6 +217,32 @@
   border-left: 10px solid #87cefa;
   margin-right: 0.5em;
 }
+.worksDetail__description.-skills {
+  margin-bottom: 3rem;
+}
+.worksDetail__skillsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.worksDetail__skillsItem {
+  font-size: 1.6rem;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  background-color: #088ee1;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+}
+.worksDetail__skillsItem.-bg-green {
+  background-color: #50c878;
+}
+.worksDetail__skillsItem.-bg-purple {
+  background-color: #9915d2;
+}
+.worksDetail__skillsItem.-bg-red {
+  background-color: #ff0000;
+}
+
 .worksDetail__fontbold {
   color: #000;
   font-weight: bold;
@@ -228,22 +250,89 @@
 .worksDetail__tagsList {
   display: flex;
 }
-.worksDetail__tagsItem {
-  font-size: 1.4rem;
-  padding: 1rem 1.5rem;
-  color: #fff;
-  background-color: #088ee1;
-  margin-right: 1rem;
-  border-radius: 20px;
+
+@media (max-width: 1024px) {
+  .mainVisual.-worksDetail {
+    height: 70vh;
+  }
+  .worksDetail {
+    padding: 5rem 0;
+  }
+  .worksDetail__title {
+    font-size: 8rem;
+  }
+  .worksDetail__title::after {
+    font-size: 2.4rem;
+    bottom: -4rem;
+  }
+  .worksDetail__subTitle {
+    font-size: 2.6rem;
+  }
+  .worksDetail__category a {
+    font-size: 1rem;
+  }
+  .worksDetail__link {
+    font-size: 1.8rem;
+  }
+  .worksDetail__flex {
+    margin-bottom: 5rem;
+  }
+  .worksDetail__description {
+    margin-bottom: 4rem;
+  }
 }
-.worksDetail__tagsItem.xd {
-  background-color: #ff0000; /* 例: スラッグが 'example1' の場合の背景色 */
+@media (max-width: 768px) {
+  .inner {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+  .worksDetail__title {
+    font-size: 6rem;
+  }
+  .worksDetail__title::after {
+    font-size: 2.2rem;
+    bottom: -3rem;
+  }
+  .worksDetail__subTitle {
+    font-size: 2.4rem;
+  }
+  .worksDetail__skillsItem {
+    font-size: 1.4rem;
+  }
 }
-.worksDetail__tagsItem.wordpress {
-  background-color: #50c878;
-}
-.worksDetail__tagsItem.php {
-  background-color: #9915d2;
+@media (max-width: 480px) {
+  .worksDetail__flex {
+    margin-bottom: 4rem;
+  }
+  .worksDetail__title {
+    font-size: 5rem;
+  }
+  .worksDetail__title::after {
+    font-size: 1.8rem;
+    bottom: -3rem;
+  }
+  .worksDetail__subTitle {
+    font-size: 2.2rem;
+  }
+  .worksDetail__link {
+    font-size: 1.6rem;
+  }
+  .worksDetail__subTitlePart {
+    margin-bottom: 3rem;
+  }
+  .worksDetail__description {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+  }
+  .worksDetail__description.-skills {
+    margin-bottom: 2rem;
+  }
+  .worksDetail__skillsItem {
+    font-size: 1.2rem;
+  }
+  .worksDetail__skillsItem {
+    padding: 0.7rem 2rem;
+  }
 }
 
 /* ============================================================ */

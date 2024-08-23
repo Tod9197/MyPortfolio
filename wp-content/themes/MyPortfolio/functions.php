@@ -25,4 +25,16 @@ add_theme_support('post-thumbnails');// サムネイルを有効に
 add_action('init','custom_post_type');
 
 
+// タグの表示並び替え
+// function custom_order_tags($tags){
+//   usort($tags,function($a,$b){
+//     $order_a = get_terms_meta($a->term_id,'custom_order'.true);
+//     $order_b = get_terms_meta($b->term_id,'custom_order'.true);
+//     return $order_a - $order_b;
+//   });
+//   return $tags;
+// }
+
+
+
 ?>

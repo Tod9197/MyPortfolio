@@ -12,6 +12,7 @@ get_header();
 <!-- 詳細 -->
 <section class="worksDetail">
   <div class="inner">
+
     <?php if(have_posts()) : ?>
       <?php while(have_posts()) : the_post(); ?>
       <div class="worksDetail__flex">
@@ -31,18 +32,6 @@ get_header();
         <?php endif; ?>
       </div>
       <div><?php the_content(); ?></div>
-
-    <?php 
-      $tags = get_the_terms(get_the_ID(), 'post_tag'); // 'post_tag' はタグのタクソノミー
-      if ($tags && !is_wp_error($tags)) : ?>
-        <div class="worksDetail__tags">
-          <ul class="worksDetail__tagsList">
-            <?php foreach ($tags as $tag) : ?>
-              <li class="worksDetail__tagsItem <?php echo esc_attr($tag->slug);?>" ><?php echo esc_html($tag->name); ?></li>
-            <?php endforeach; ?>
-          </ul>
-        </div>
-    <?php endif; ?>
 
       <?php endwhile; ?>
     <?php endif; ?>

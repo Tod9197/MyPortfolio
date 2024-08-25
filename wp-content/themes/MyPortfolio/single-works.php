@@ -24,17 +24,15 @@ get_header();
         if($custom_url) : ?>
           <a class="worksDetail__link" href="<?php echo esc_html($custom_url); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($custom_url); ?></a>
         </div>
+        <?php endif; ?>
         <?php if(has_post_thumbnail()) : ?>
           <a class="worksDetail__photosLink" href="<?php echo esc_html($custom_url); ?>" target="_blank" rel="noopener noreferrer">
           <?php the_post_thumbnail('full',array('class'=>'worksDetail__photosItem')); ?>
           </a>
         <?php endif; ?>
-        <?php endif; ?>
       </div>
       <div><?php the_content(); ?></div>
-
       <?php endwhile; ?>
     <?php endif; ?>
-
   </div>
 </section>

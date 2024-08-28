@@ -46,6 +46,19 @@
               }
               ?>
             </div>
+            <p class="worksList__tagList">
+              <?php  
+              $tags = get_the_tags();
+              if($tags){
+                $tags_name = array();
+                foreach($tags as $tag){
+                  $tags_name[] = '<span class="worksList__tagItem">' . esc_html($tag->name) . '</span>';
+                }
+                echo implode('',$tags_name);
+              }
+              ?>
+            </p>
+            
             <p class="worksList__itemButton">詳しく見る</p>
           </a>
         </li>

@@ -8,6 +8,27 @@
   padding-left: 1rem;
 }
 
+@media (max-width: 768px) {
+  .inner {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+  .pc-only {
+    display: block;
+  }
+  .sp-only {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: block;
+  }
+}
+
 /* ============================================================ */
 /* トップページ */
 /* メインビジュアル */
@@ -136,7 +157,7 @@
 }
 
 .worksList__itemTitle {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-align: left;
   letter-spacing: 0.1em;
@@ -146,15 +167,24 @@
 .worksList__itemCategory {
   display: inline;
   font-size: 1rem;
-  padding: 0.7rem 1.2rem;
+  padding: 0.7rem 1.5rem;
   color: #fff;
   background-color: #088ee1;
   border-radius: 20px;
   margin-bottom: 3rem;
   margin-left: 1rem;
 }
-.worksList__itemCategory.corporate {
-  background-color: green;
+.worksList__tagList {
+  margin-top: 2.5rem;
+  margin-left: 1rem;
+}
+.worksList__tagItem {
+  color: #fff;
+  font-size: 1rem;
+  background-color: #ff6600;
+  padding: 0.3rem 2rem;
+  border-radius: 10px;
+  margin-right: 0.5rem;
 }
 .worksList__itemButton {
   font-size: 1.3rem;
@@ -260,13 +290,33 @@
   background-color: #088ee1;
   border-radius: 20px;
 }
+.worskDetail__linkWrap {
+  display: flex;
+  flex-direction: column;
+}
 .worksDetail__link {
   font-size: 2rem;
   letter-spacing: 0.1em;
   color: #088ee1;
+  padding: 1rem;
+  overflow: hidden;
 }
 .worksDetail__link:hover {
   opacity: 0.7;
+}
+.worksDetail__githubLink {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: #ff6600;
+  padding: 1rem;
+  overflow: hidden;
+}
+.worksDetail__githubLink:hover {
+  opacity: 0.7;
+}
+.worksDetail__link span,
+.worksDetail__githubLink span {
+  color: #333;
 }
 .worksDetail__flex {
   display: flex;
@@ -296,7 +346,7 @@
   color: #333;
   font-size: 1.8rem;
   letter-spacing: 0.1em;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
   line-height: 1.8;
   position: relative;
   text-indent: -1.5rem;
@@ -311,11 +361,28 @@
   margin-right: 0.5em;
 }
 .worksDetail__description.-skills {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+}
+.worksDetail__description.-about,
+.worksDetail__text {
+  color: #333;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 2rem;
+}
+.worksDetail__description.-about,
+.worksDetail__description.-function {
+  margin-bottom: 0;
+}
+.worksDetail__text.-last {
+  margin-bottom: 2rem;
 }
 .worksDetail__skillsList {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 .worksDetail__skillsItem {
   font-size: 1.6rem;
@@ -326,6 +393,9 @@
   margin-bottom: 1rem;
   border-radius: 20px;
 }
+.worksDetail__skillsItem.-bg-gold {
+  background-color: #ffc107;
+}
 .worksDetail__skillsItem.-bg-green {
   background-color: #50c878;
 }
@@ -334,6 +404,9 @@
 }
 .worksDetail__skillsItem.-bg-red {
   background-color: #ff0000;
+}
+.worksDetail__skillsItem.-bg-deep-blue {
+  background-color: #002f6c;
 }
 
 .worksDetail__fontbold {
@@ -354,6 +427,7 @@
   font-size: 1.6rem;
   margin-left: 2rem;
   margin-bottom: 1.5rem;
+  line-height: 1.8;
 }
 .worksDetail__pageLink {
   display: block;
@@ -379,6 +453,46 @@
   opacity: 0.7;
 }
 
+/* 主要機能 */
+.worksDetail__functionList {
+  display: block;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+.worksDetail__functionItem {
+  color: #000;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+.worksDetail__functionText {
+  color: #333;
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+.worksDetail__demoText {
+  color: #ff0000;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+.worksDetail__demoWrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.worksDetail__demoAccount {
+  color: #333;
+  font-size: 1.6rem;
+  margin-left: 3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
 @media (max-width: 1024px) {
   .mainVisual.-worksDetail {
     height: 70vh;
@@ -399,7 +513,8 @@
   .worksDetail__category a {
     font-size: 1rem;
   }
-  .worksDetail__link {
+  .worksDetail__link,
+  .worksDetail__githubLink {
     font-size: 1.8rem;
   }
   .worksDetail__flex {
@@ -434,6 +549,19 @@
   .worksDetail__skillsItem {
     font-size: 1.4rem;
   }
+  .worksDetail__Photos {
+    grid-template-columns: unset;
+  }
+  .worksDetail__PhotosLink {
+    margin-bottom: 2rem;
+  }
+  .worksDetail__description.-page {
+    margin-bottom: 2rem;
+  }
+  .worksDetail__text {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
 }
 @media (max-width: 480px) {
   .worksDetail__flex {
@@ -449,7 +577,8 @@
   .worksDetail__subTitle {
     font-size: 2.2rem;
   }
-  .worksDetail__link {
+  .worksDetail__link,
+  .worksDetail__githubLink {
     font-size: 1.6rem;
   }
   .worksDetail__subTitlePart {
@@ -462,11 +591,43 @@
   .worksDetail__description.-skills {
     margin-bottom: 2rem;
   }
+  .worksDetail__skillsList {
+    margin-bottom: 3rem;
+  }
   .worksDetail__skillsItem {
     font-size: 1.2rem;
   }
   .worksDetail__skillsItem {
     padding: 0.7rem 2rem;
+  }
+  .worksDetail__list {
+    margin-bottom: 3rem;
+  }
+  .worksDetail__page {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  .worksDetail__pageLink {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  .worksDetail__text {
+    font-size: 1.2rem;
+  }
+  .worksDetail__functionList {
+    margin-top: -2rem;
+  }
+  .worksDetail__functionItem {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  .worksDetail__demoWrap {
+    margin-bottom: 2rem;
+  }
+  .worksDetail__demoText,
+  .worksDetail__demoAccount {
+    font-size: 1.4rem;
   }
 }
 

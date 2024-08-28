@@ -19,12 +19,19 @@ get_header();
         <div class="worksDetail__subTitlePart">
         <h3 class="worksDetail__subTitle"><?php the_title(); ?></h3>
         <div class="worksDetail__category"><?php the_category(','); ?></div>
+        <div class="worskDetail__linkWrap">
         <?php  
         $custom_url = get_field('custom_url'); 
         if($custom_url) : ?>
-          <a class="worksDetail__link" href="<?php echo esc_html($custom_url); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($custom_url); ?></a>
-        </div>
+          <a class="worksDetail__link" href="<?php echo esc_html($custom_url); ?>" target="_blank" rel="noopener noreferrer"><span>URL : </span><?php echo esc_html($custom_url); ?></a>
         <?php endif; ?>
+        <?php  
+        $github_url = get_field('github_url');
+        if($github_url) : ?>
+        <a class="worksDetail__githubLink" href="<?php echo esc_html($github_url); ?>" target="_blank" rel="noopener noreferrer"><span>GitHub : </span><?php echo esc_html($github_url); ?></a>
+        <?php endif; ?>
+        </div>
+        </div>
         <?php if(has_post_thumbnail()) : ?>
           <a class="worksDetail__photosLink" href="<?php echo esc_html($custom_url); ?>" target="_blank" rel="noopener noreferrer">
           <?php the_post_thumbnail('full',array('class'=>'worksDetail__photosItem')); ?>
@@ -34,5 +41,6 @@ get_header();
       <div><?php the_content(); ?></div>
       <?php endwhile; ?>
     <?php endif; ?>
+
   </div>
 </section>

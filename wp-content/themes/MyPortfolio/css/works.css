@@ -1,0 +1,417 @@
+/* ============================================================ */
+/* 制作詳細ページ */
+.mainVisual.-worksDetail {
+  height: 80vh;
+  background-image: url(../img/programming-02.jpg);
+  z-index: 100;
+}
+.mainVisual.-worksDetail::after {
+  background-color: #040831;
+  opacity: 0.3;
+  z-index: 200;
+}
+
+.worksDetail {
+  padding: 10rem 0;
+}
+.worksDetail__title {
+  position: relative;
+  font-family: cursive;
+  font-size: 9rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  top: 40%;
+  text-align: center;
+  z-index: 3000;
+  text-shadow: 2px 2px 2px #000;
+}
+.worksDetail__title::after {
+  position: absolute;
+  content: "制作実績";
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  bottom: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.worksArchive__title {
+  position: relative;
+  font-family: cursive;
+  font-size: 9rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  top: 40%;
+  text-align: center;
+  z-index: 3000;
+  text-shadow: 2px 2px 2px #000;
+}
+.worksArchive__title::after {
+  position: absolute;
+  content: "制作一覧";
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  bottom: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.worksDetail__subTitle {
+  color: #088ee1;
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+  text-align: left;
+  margin-bottom: 5rem;
+}
+.worksDetail__category {
+  margin-bottom: 4rem;
+}
+.worksDetail__category a {
+  display: inline;
+  font-size: 1.2rem;
+  pointer-events: none;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  background-color: #088ee1;
+  border-radius: 20px;
+}
+.worskDetail__linkWrap {
+  display: flex;
+  flex-direction: column;
+}
+.worksDetail__link {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: #088ee1;
+  padding: 1rem;
+  overflow: hidden;
+}
+.worksDetail__link:hover {
+  opacity: 0.7;
+}
+.worksDetail__githubLink {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: #ff6600;
+  padding: 1rem;
+  overflow: hidden;
+}
+.worksDetail__githubLink:hover {
+  opacity: 0.7;
+}
+.worksDetail__link span,
+.worksDetail__githubLink span {
+  color: #333;
+}
+.worksDetail__flex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7rem;
+}
+.worksDetail__subTitlePart {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.worksDetail__photosLink {
+  width: 100%;
+  margin: auto;
+  border: 1px solid #ddd;
+}
+.worksDetail__photosLink:hover {
+  opacity: 0.8;
+}
+.worksDetail__photosItem {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 200/100;
+  object-fit: contain;
+  transition: all 0.3s;
+}
+.worksDetail__description {
+  color: #333;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 5rem;
+  line-height: 1.8;
+  position: relative;
+  text-indent: -1.5rem;
+  padding-left: 1.5rem;
+}
+.worksDetail__description.-page {
+  margin-bottom: 3rem;
+}
+.worksDetail__description::before {
+  content: "";
+  border-left: 10px solid #87cefa;
+  margin-right: 0.5em;
+}
+.worksDetail__description.-skills {
+  margin-bottom: 1.5rem;
+}
+.worksDetail__description.-about,
+.worksDetail__text {
+  color: #333;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 2rem;
+}
+.worksDetail__description.-about,
+.worksDetail__description.-function {
+  margin-bottom: 0;
+}
+.worksDetail__text.-last {
+  margin-bottom: 2rem;
+}
+.worksDetail__skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+.worksDetail__skillsItem {
+  font-size: 1.6rem;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  background-color: #088ee1;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+}
+.worksDetail__skillsItem.-bg-gold {
+  background-color: #ffc107;
+}
+.worksDetail__skillsItem.-bg-green {
+  background-color: #50c878;
+}
+.worksDetail__skillsItem.-bg-purple {
+  background-color: #9915d2;
+}
+.worksDetail__skillsItem.-bg-red {
+  background-color: #ff0000;
+}
+.worksDetail__skillsItem.-bg-deep-blue {
+  background-color: #002f6c;
+}
+
+.worksDetail__fontbold {
+  color: #000;
+  font-weight: bold;
+}
+.worksDetail__tagsList {
+  display: flex;
+}
+
+.worksDetail__list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+.worksDetail__page {
+  color: #000;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+.worksDetail__pageLink {
+  display: block;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  color: #2e8b57;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.worksDetail__pageLink:hover {
+  opacity: 0.7;
+}
+.worksDetail__Photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 7rem;
+}
+.worksDetail__PhotosLink {
+  border: 1px solid #ddd;
+}
+.worksDetail__PhotosLink:hover {
+  opacity: 0.7;
+}
+
+/* 主要機能 */
+.worksDetail__functionList {
+  display: block;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+.worksDetail__functionItem {
+  color: #000;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+.worksDetail__functionText {
+  color: #333;
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+.worksDetail__demoText {
+  color: #ff0000;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+.worksDetail__demoWrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.worksDetail__demoAccount {
+  color: #333;
+  font-size: 1.6rem;
+  margin-left: 3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+  .mainVisual.-worksDetail {
+    height: 70vh;
+  }
+  .worksDetail {
+    padding: 5rem 0;
+  }
+  .worksDetail__title {
+    font-size: 8rem;
+  }
+  .worksDetail__title::after {
+    font-size: 2.4rem;
+    bottom: -4rem;
+  }
+  .worksDetail__subTitle {
+    font-size: 2.6rem;
+  }
+  .worksDetail__category a {
+    font-size: 1rem;
+  }
+  .worksDetail__link,
+  .worksDetail__githubLink {
+    font-size: 1.8rem;
+  }
+  .worksDetail__flex {
+    margin-bottom: 5rem;
+  }
+  .worksDetail__description {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .inner {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+  .worksDetail__title {
+    font-size: 6rem;
+  }
+  .worksDetail__title::after {
+    font-size: 2.2rem;
+    bottom: -3rem;
+  }
+  .worksDetail__subTitle {
+    font-size: 2.4rem;
+    margin-bottom: 4rem;
+  }
+  .worksDetail__category {
+    margin-bottom: 3rem;
+  }
+  .worksDetail__category a {
+    padding: 0.7rem 1.3rem;
+  }
+  .worksDetail__skillsItem {
+    font-size: 1.4rem;
+  }
+  .worksDetail__Photos {
+    grid-template-columns: unset;
+  }
+  .worksDetail__PhotosLink {
+    margin-bottom: 2rem;
+  }
+  .worksDetail__description.-page {
+    margin-bottom: 2rem;
+  }
+  .worksDetail__text {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .worksDetail__flex {
+    margin-bottom: 4rem;
+  }
+  .worksDetail__title {
+    font-size: 5rem;
+  }
+  .worksDetail__title::after {
+    font-size: 1.8rem;
+    bottom: -3rem;
+  }
+  .worksDetail__subTitle {
+    font-size: 2.2rem;
+  }
+  .worksDetail__link,
+  .worksDetail__githubLink {
+    font-size: 1.6rem;
+  }
+  .worksDetail__subTitlePart {
+    margin-bottom: 3rem;
+  }
+  .worksDetail__description {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+  }
+  .worksDetail__description.-skills {
+    margin-bottom: 2rem;
+  }
+  .worksDetail__skillsList {
+    margin-bottom: 3rem;
+  }
+  .worksDetail__skillsItem {
+    font-size: 1.2rem;
+  }
+  .worksDetail__skillsItem {
+    padding: 0.7rem 2rem;
+  }
+  .worksDetail__list {
+    margin-bottom: 3rem;
+  }
+  .worksDetail__page {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  .worksDetail__pageLink {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  .worksDetail__text {
+    font-size: 1.2rem;
+  }
+  .worksDetail__functionList {
+    margin-top: -2rem;
+  }
+  .worksDetail__functionItem {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  .worksDetail__demoWrap {
+    margin-bottom: 2rem;
+  }
+  .worksDetail__demoText,
+  .worksDetail__demoAccount {
+    font-size: 1.4rem;
+  }
+}

@@ -24,4 +24,12 @@ function custom_post_type(){
 add_theme_support('post-thumbnails');// サムネイルを有効に
 add_action('init','custom_post_type');
 
+function get_category_post_count($category_slug){
+  $term = get_term_by('slug',$category_slug,'category');
+  if($term){
+    return $term->count;
+  }
+  return 0;
+}
+
 ?>

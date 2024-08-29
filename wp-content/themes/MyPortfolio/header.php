@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/base.css')); ?>" type="text/css">
   <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/style.css')); ?>" type="text/css">
   <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/header.css')); ?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/works.css')); ?>" type="text/css">
   <script src="<?php echo esc_url(get_theme_file_uri('/js/main.js'));?>"></script>
   <title>
     <?php 
@@ -22,7 +23,7 @@
       <nav class="headerNav">
         <ul class="headerNav__list">
           <li class="headerNav__listItem">
-            <a href="">Works</a>
+            <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>">Works</a>
           </li>
           <li class="headerNav__listItem">
             <a href="">Profile</a>

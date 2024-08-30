@@ -50,7 +50,7 @@ $args_client = array(
     <ul class="worksList">
       <?php while($client_query->have_posts()) : $client_query->the_post(); ?>
         <li class="worksList__item">
-          <a class="worksList__itemLink" href="<?php the_permalink(); ?>">
+          <a class="worksList__itemLink" href="<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer">
             <?php if(has_post_thumbnail()) : ?>
               <?php the_post_thumbnail('full',array('class' => 'worksList__itemImg')); ?>
             <?php endif; ?>
@@ -111,7 +111,7 @@ $args_original = array(
     <ul class="worksList">
       <?php while($original_query->have_posts()) : $original_query->the_post(); ?>
         <li class="worksList__item">
-          <a class="worksList__itemLink" href="<?php the_permalink(); ?>">
+          <a class="worksList__itemLink" href="<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer">
             <?php if(has_post_thumbnail()) : ?>
               <?php the_post_thumbnail('full',array('class' => 'worksList__itemImg')); ?>
             <?php endif; ?>
@@ -150,9 +150,35 @@ $args_original = array(
 <!-- オリジナル制作ここまで -->
   </div>
 </section>
+<!-- 制作一覧ここまで -->
+
+
+<!-- 自己紹介 About -->
+<section class="profile" id="profile">
+  <div class="inner">
+    <h2 class="profileTitle">Profile</h2>
+    <p class="profileName">山口理</p>
+    <span class="profileName -english"> -Yamaguchi Tadashi-</span>
+      <a class="profile__github" href="https://github.com/Tod9197"  target="_blank" rel="noopener noreferrer">
+      <img class="profile__githubImg" src="<?php echo esc_url(get_theme_file_uri('/img/github-icon-01.png')); ?>" alt="GitHubアイコン">  
+      </a>
+    <div class="profileText__wrap">
+      <div class="profileText__ouline">
+    <p class="profileText">京都市在住。携帯電話販売スタッフ、通信会社の営業、フィリピンにある英会話スクールのスタッフなどの職歴を経て、 2020年にプログラミングの学習をスタートしました。</p>
+    <p class="profileText">2022年10月より東京にあるWeb制作会社様より断続的にお仕事をいただき、主に<span>WordPress</span>や<span>JavaScript</span>などを使用したコーディング業務に携わらせていただいています(業務委託)</p>
+    <p class="profileText">今までに<span>IT企業の自社サイトのフルリニューアル</span>、<span>土木建築会社のコーポレートサイト構築</span>といった数々のプロジェクトに入り、実務経験を積んできました。様々な経験をする中でどんどんとWebの世界にのめり込んでいき、もっとWebの世界を広く、深く知りたいと思い、2024年2月にweb開発が学べるプログラミングスクールに入学しました。
+    </p>
+    <p class="profileText">そこでは<span>Laravel,React,TypeScript,Next.js,GitHub,Docker</span>や<span>チーム開発</span>などよりWebの深い所を学びました。これからはフロントエンド、バックエンド、インフラと全方向に自身のスキルを伸ばしていき、関わる企業様やクライアント様の利益に貢献したいと考えております。
+    </p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- 自己紹介 About ここまで -->
 
 <!-- スキル -->
-<section class="skills">
+<section class="skills" id="skills">
   <div class="inner">
   <h2 class=" skillsTitle">Skills</h2>
 
@@ -206,6 +232,10 @@ $args_original = array(
       <img class="skillsList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/laravel-icon-01.png')); ?>" alt="Laravelアイコン">
       <span class="skillsList__itemText">Laravel</span>
     </li>
+    <li class="skillsList__item">
+      <img class="skillsList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/mysql-icon-01.png')); ?>" alt="MySQLアイコン">
+      <span class="skillsList__itemText">MySQL</span>
+    </li>
   </ul>
 
   <h3 class="skillsCategory -others">System/Others</h3>
@@ -229,6 +259,10 @@ $args_original = array(
   </ul>
 </div>
 </section>
+<!-- スキルここまで -->
+
+
+
 
   <?php wp_footer(); ?>
 </body>

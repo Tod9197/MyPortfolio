@@ -26,10 +26,10 @@
             <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>">Works</a>
           </li>
           <li class="headerNav__listItem">
-            <a href="">Profile</a>
+            <a href="#profile">Profile</a>
           </li>
           <li class="headerNav__listItem">
-            <a href="">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li class="headerNav__listItem">
             <a href="">Contact</a>

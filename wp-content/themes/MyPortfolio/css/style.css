@@ -58,7 +58,7 @@
 /* ============================================================ */
 /* 制作一覧 */
 .works {
-  padding: 15rem 0;
+  padding: 15rem 0 10rem;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
@@ -258,105 +258,6 @@
   font-size: 1.4rem;
 }
 
-@media (max-width: 1024px) {
-  .works::before {
-    font-size: 8rem;
-  }
-  .worksTitle {
-    font-size: 6rem;
-  }
-  .worksTitle::before {
-    width: 15%;
-    bottom: -1.5rem;
-  }
-  .worksTitle::after {
-    font-size: 2.2rem;
-    bottom: -5rem;
-  }
-  .worksTab__content {
-    padding: 4rem 2rem 8rem 2rem;
-  }
-  .worksList__itemTitle {
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
-  }
-  .worksList__tagList {
-    margin-top: 1.5rem;
-  }
-  .worksList__itemButton {
-    margin-top: 3rem;
-  }
-  .worksList__itemCategory {
-    margin-bottom: 0.5rem;
-  }
-}
-@media (max-width: 768px) {
-  .worksTitle {
-    font-size: 5rem;
-  }
-  .worksTitle::before {
-    width: 15%;
-    bottom: -1.5rem;
-  }
-  .worksTitle::after {
-    font-size: 1.8rem;
-    bottom: -4.5rem;
-  }
-  .worksTitle {
-    margin-bottom: 10rem;
-  }
-  .worksTabs__button {
-    font-size: 1.6rem;
-  }
-  .worksTab__content {
-    padding: 3rem 2rem 6rem 2rem;
-  }
-  .worksList__itemTitle {
-    font-size: 1.3rem;
-  }
-  .worksList {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-}
-@media (max-width: 480px) {
-  .works {
-    padding: 12rem 0;
-  }
-  .works::before {
-    font-size: 5rem;
-  }
-  .worksTitle {
-    font-size: 4rem;
-  }
-  .worksTitle::before {
-    width: 20%;
-    bottom: -1.5rem;
-  }
-  .worksTitle::after {
-    font-size: 1.6rem;
-  }
-  .worksTabs__button {
-    font-size: 1.4rem;
-  }
-  .worksList__itemTitle {
-    font-size: 1.6rem;
-  }
-  .worksTab__content {
-    padding: 3rem 1rem 6rem 1rem;
-  }
-  .worksList {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-  }
-  .worksList__itemCategory {
-    font-size: 1.2rem;
-  }
-  .worksList__tagItem {
-    font-size: 1.2rem;
-  }
-}
-
 /* ============================================================ */
 /* 制作一覧ページ */
 .mainVisual.-worksArchive {
@@ -370,7 +271,7 @@
 }
 
 /* ============================================================ */
-/* スキルセクション */
+/* スキル */
 .skills {
   padding: 15rem 0;
   position: relative;
@@ -439,16 +340,7 @@
   opacity: 0.8;
   margin-bottom: 7rem;
 }
-/* .skillsCategory::before {
-  content: "";
-  width: 20%;
-  height: 1px;
-  bottom: -1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  position: absolute;
-} */
+
 .skillsCategory::after {
   font-size: 1.4rem;
   content: "";
@@ -477,7 +369,7 @@
 }
 .skillsList {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   border-bottom: 2px solid #eee;
   margin-bottom: 5rem;
   gap: 3rem;
@@ -491,10 +383,10 @@
   margin-bottom: 3rem;
 }
 .skillsList__itemImg {
-  width: 130px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
-  aspect-ratio: 130/100;
+  aspect-ratio: 80/80;
   margin-bottom: 2rem;
 }
 
@@ -505,4 +397,309 @@
   text-align: center;
   opacity: 0.8;
 }
+/* ============================================================ */
+/* 自己紹介 */
+.profile {
+  padding: 5rem 0 15rem;
+}
+.profileTitle {
+  font-size: 7rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+  position: relative;
+  margin-bottom: 15rem;
+}
+.profileTitle::before {
+  content: "";
+  width: 10%;
+  height: 1px;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  position: absolute;
+}
+.profileTitle::after {
+  font-size: 2.4rem;
+  content: "プロフィール";
+  position: absolute;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.profileName__flex {
+  display: flex;
+  align-items: center;
+}
+.profileName {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.profileName.-english {
+  display: block;
+  color: #333;
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+.profile__github {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+.profile__githubImg {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  margin: auto;
+}
+.profile__githubImg:hover {
+  opacity: 0.7;
+}
+.profileText__wrap {
+  padding: 1rem;
+  border: 2px solid #ff9933;
+}
+.profileText__ouline {
+  border: 2px solid #ff7f33;
+  padding: 5rem;
+}
+.profileText {
+  color: #333;
+  font-size: 1.8rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+}
+.profileText span {
+  font-weight: bold;
+  background-color: #fffb80;
+  padding: 0.2rem;
+}
+
+/* ============================================================ */
+/* 制作一覧・スキルセクション レスポンシブ */
+/* ============================================================ */
+@media (max-width: 1024px) {
+  .works::before,
+  .skills::before {
+    font-size: 8rem;
+  }
+  .worksTitle,
+  .skillsTitle,
+  .profileTitle {
+    font-size: 6rem;
+  }
+  .skillsTitle {
+    margin-bottom: 12rem;
+  }
+  .profile {
+    padding: 5rem 0 10rem;
+  }
+  .profileTitle {
+    margin-bottom: 10rem;
+  }
+  .worksTitle::before,
+  .skillsTitle::before,
+  .profileTitle::before {
+    width: 15%;
+    bottom: -1.5rem;
+  }
+  .worksTitle::after,
+  .skillsTitle::after,
+  .profileTitle::after {
+    font-size: 2.2rem;
+    bottom: -5rem;
+  }
+
+  .profile__githubImg {
+    width: 5rem;
+    height: 5rem;
+  }
+  .worksTab__content {
+    padding: 4rem 2rem 8rem 2rem;
+  }
+  .worksList__itemTitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  .skillsList__itemText {
+    font-size: 2.2rem;
+  }
+  .worksList__tagList {
+    margin-top: 1.5rem;
+  }
+  .worksList__itemButton {
+    margin-top: 3rem;
+  }
+  .worksList__itemCategory {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .works,
+  .skills {
+    padding: 15rem 0 5rem;
+  }
+  .profile {
+    padding: 5rem 0;
+  }
+  .worksTitle,
+  .skillsTitle,
+  .profileTitle {
+    font-size: 5rem;
+  }
+  .worksTitle::before,
+  .skillsTitle::before,
+  .profileTitle::before {
+    width: 15%;
+    bottom: -1.5rem;
+  }
+  .worksTitle::after,
+  .skillsTitle::after,
+  .profileTitle::after {
+    font-size: 1.8rem;
+    bottom: -4.5rem;
+  }
+  .worksTitle {
+    margin-bottom: 10rem;
+  }
+  .worksTabs__button {
+    font-size: 1.6rem;
+  }
+  .worksTab__content {
+    padding: 3rem 2rem 6rem 2rem;
+  }
+  .profileName {
+    font-size: 3rem;
+  }
+  .profile__githubImg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .profileName.-english {
+    font-size: 2.5rem;
+  }
+  .profileText__ouline {
+    padding: 4rem;
+  }
+  .profileText {
+    font-size: 1.6rem;
+  }
+  .skillsCategory {
+    font-size: 3rem;
+  }
+  .skillsList {
+    gap: 1rem;
+  }
+  .skillsList__itemImg {
+    width: 60px;
+    height: 60px;
+    aspect-ratio: 60/60;
+  }
+  .worksList__itemTitle {
+    font-size: 1.3rem;
+  }
+  .worksList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .works,
+  .skills {
+    padding: 12rem 0 5rem;
+  }
+  .works::before,
+  .skills::before {
+    font-size: 6rem;
+  }
+  .worksTitle,
+  .skillsTitle,
+  .profileTitle {
+    font-size: 4rem;
+  }
+  .skillsTitle {
+    margin-bottom: 10rem;
+  }
+  .worksTitle::before,
+  .skillsTitle::before,
+  .profileTitle::before {
+    width: 20%;
+    bottom: -1.5rem;
+  }
+  .worksTitle::after,
+  .skillsTitle::after,
+  .profileTitle::after {
+    font-size: 1.6rem;
+  }
+  .worksTabs__button {
+    font-size: 1.4rem;
+  }
+  .worksList__itemTitle {
+    font-size: 1.6rem;
+  }
+  .worksTab__content {
+    padding: 3rem 1rem 6rem 1rem;
+  }
+  .worksList {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .profileName {
+    font-size: 2.5rem;
+  }
+  .profileName.-english {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .profile__github {
+    margin-bottom: 3rem;
+  }
+  .profile__githubImg {
+    width: 3rem;
+    height: 3rem;
+  }
+  .profileText__wrap {
+    padding: 0.5rem;
+  }
+  .profileText__ouline {
+    padding: 2rem;
+  }
+  .profileText {
+    font-size: 1.4rem;
+  }
+  .skillsCategory {
+    font-size: 2.4rem;
+    margin-bottom: 7rem;
+  }
+  .skillsCategory::after {
+    font-size: 1.2rem;
+  }
+  .skillsList {
+    padding-bottom: 3rem;
+  }
+  .skillsList__item {
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+  .skillsList__itemText {
+    font-size: 2rem;
+  }
+  .worksList__itemCategory {
+    font-size: 1.2rem;
+  }
+  .worksList__tagItem {
+    font-size: 1.2rem;
+  }
+}
+
 /* ============================================================ */

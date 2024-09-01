@@ -54,6 +54,37 @@
   opacity: 0.6;
   z-index: 200;
 }
+.mainVisual__topTitle {
+  position: absolute;
+  font-family: cursive;
+  font-size: 9rem;
+  color: #fff;
+  letter-spacing: 0.15em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3000;
+  text-shadow: 2px 2px 2px #000;
+}
+@media (max-width: 1024px) {
+  .mainVisual__topTitle {
+    font-size: 8rem;
+  }
+  .mainVisual {
+    height: 80vh;
+  }
+}
+@media (max-width: 768px) {
+  .mainVisual__topTitle {
+    font-size: 7rem;
+  }
+}
+@media (max-width: 480px) {
+  .mainVisual__topTitle {
+    font-size: 5rem;
+  }
+}
 
 /* ============================================================ */
 /* 制作一覧 */
@@ -273,7 +304,7 @@
 /* ============================================================ */
 /* スキル */
 .skills {
-  padding: 15rem 0;
+  padding: 15rem 0 0;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
@@ -374,6 +405,9 @@
   margin-bottom: 5rem;
   gap: 3rem;
 }
+.skillsList:last-child {
+  margin-bottom: 0;
+}
 .skillsList__item {
   display: flex;
   flex-direction: column;
@@ -383,10 +417,10 @@
   margin-bottom: 3rem;
 }
 .skillsList__itemImg {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  aspect-ratio: 80/80;
+  aspect-ratio: 60/60;
   margin-bottom: 2rem;
 }
 
@@ -400,7 +434,7 @@
 /* ============================================================ */
 /* 自己紹介 */
 .profile {
-  padding: 5rem 0 15rem;
+  padding: 10rem 0 15rem;
 }
 .profileTitle {
   font-size: 7rem;
@@ -484,6 +518,28 @@
   background-color: #fffb80;
   padding: 0.2rem;
 }
+.bg-space {
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  background-image: url(../img/programming-05.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  z-index: 100;
+}
+.bg-space::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #040831;
+  opacity: 0.6;
+  z-index: 200;
+}
 
 /* ============================================================ */
 /* 制作一覧・スキルセクション レスポンシブ */
@@ -502,7 +558,7 @@
     margin-bottom: 12rem;
   }
   .profile {
-    padding: 5rem 0 10rem;
+    padding: 8rem 0 10rem;
   }
   .profileTitle {
     margin-bottom: 10rem;
@@ -547,10 +603,10 @@
 @media (max-width: 768px) {
   .works,
   .skills {
-    padding: 15rem 0 5rem;
+    padding: 12rem 0 5rem;
   }
-  .profile {
-    padding: 5rem 0;
+  .skills {
+    padding-bottom: 0;
   }
   .worksTitle,
   .skillsTitle,
@@ -616,11 +672,14 @@
 @media (max-width: 480px) {
   .works,
   .skills {
-    padding: 12rem 0 5rem;
+    padding: 10rem 0 5rem;
+  }
+  .skills {
+    padding-bottom: 0;
   }
   .works::before,
   .skills::before {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .worksTitle,
   .skillsTitle,
@@ -654,11 +713,14 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
   }
+  .profileTitle {
+    margin-bottom: 8rem;
+  }
   .profileName {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .profileName.-english {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
   .profile__github {
@@ -691,8 +753,13 @@
     height: 120px;
     margin-bottom: 1rem;
   }
+  .skillsList__itemImg {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 50/50;
+  }
   .skillsList__itemText {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .worksList__itemCategory {
     font-size: 1.2rem;

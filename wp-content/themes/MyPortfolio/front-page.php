@@ -2,11 +2,11 @@
 
 <!-- メインビジュアル -->
 <section class="mainVisual">
-
+  <h2 class="mainVisual__topTitle">My portfolio</h2>
 </section>
 
 <!-- 制作一覧 -->
-<section class="works">
+<section class="works" id="works">
   <div class="inner">
   <h2 class="worksTitle">Works</h2>
 
@@ -261,8 +261,14 @@ $args_original = array(
 </section>
 <!-- スキルここまで -->
 
+<div class="bg-space">
 
+</div>
 
+<footer class="footer">
+    <p class="footer__copyRight">&copy;<?php echo date('Y'); ?><?php bloginfo('name'); ?>
+    All rights reserved.</p>
+</footer>
 
   <?php wp_footer(); ?>
 </body>

@@ -261,9 +261,19 @@ $args_original = array(
 </section>
 <!-- スキルここまで -->
 
-<div class="bg-space">
+<!-- Contactセクション -->
+<section class="contact" id="contact">
+  <div class="inner">
+    <div class="contactWrap">
+      <div class="contactOutline">
+        <h3 class="contactTitle">Contact</h3>
+        <button class="contactButton">お問い合わせはこちら</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contactセクションここまで -->
 
-</div>
 
 <footer class="footer">
     <p class="footer__copyRight">&copy;<?php echo date('Y'); ?><?php bloginfo('name'); ?>

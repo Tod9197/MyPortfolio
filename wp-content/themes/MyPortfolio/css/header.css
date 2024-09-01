@@ -87,7 +87,7 @@
 }
 .hamburgerNav__listItem__link {
   display: block;
-  width: 20%;
+  width: 100%;
   font-size: 3.5rem;
   font-family: fantasy;
   color: #000;
@@ -100,7 +100,7 @@
 .hamburgerNav__listItem__link::after {
   content: "";
   position: absolute;
-  width: 50%;
+  width: 10%;
   height: 2px;
   bottom: 2rem;
   left: 50%;

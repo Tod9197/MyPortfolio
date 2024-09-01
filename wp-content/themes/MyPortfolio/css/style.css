@@ -518,7 +518,9 @@
   background-color: #fffb80;
   padding: 0.2rem;
 }
-.bg-space {
+/* ============================================================ */
+/* お問い合わせ */
+.contact {
   width: 100%;
   height: 50rem;
   position: relative;
@@ -528,7 +530,7 @@
   background-position: bottom;
   z-index: 100;
 }
-.bg-space::after {
+.contact::after {
   display: block;
   content: "";
   position: absolute;
@@ -540,9 +542,65 @@
   opacity: 0.6;
   z-index: 200;
 }
+.contactWrap {
+  width: 80%;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 300;
+}
+.contactOutline {
+  border: 1px solid #ddd;
+  padding: 5rem 0;
+}
+.contactTitle {
+  font-size: 7rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+  position: relative;
+  margin-bottom: 10rem;
+}
+.contactTitle::before {
+  content: "";
+  width: 10%;
+  height: 1px;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  position: absolute;
+}
+.contactTitle::after {
+  font-size: 2.4rem;
+  content: "お問い合わせ";
+  position: absolute;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contactButton {
+  font-size: 1.6rem;
+  display: block;
+  color: #fff;
+  background-color: #088ee1;
+  padding: 1rem 4rem;
+  margin: auto;
+  border: none;
+  border-radius: 20px;
+}
+.contactButton:hover {
+  opacity: 0.7;
+}
 
 /* ============================================================ */
-/* 制作一覧・スキルセクション レスポンシブ */
+/* 制作一覧・スキル・お問い合わせ レスポンシブ */
 /* ============================================================ */
 @media (max-width: 1024px) {
   .works::before,
@@ -551,7 +609,8 @@
   }
   .worksTitle,
   .skillsTitle,
-  .profileTitle {
+  .profileTitle,
+  .contactTitle {
     font-size: 6rem;
   }
   .skillsTitle {
@@ -565,13 +624,15 @@
   }
   .worksTitle::before,
   .skillsTitle::before,
-  .profileTitle::before {
+  .profileTitle::before,
+  .contactTitle::before {
     width: 15%;
     bottom: -1.5rem;
   }
   .worksTitle::after,
   .skillsTitle::after,
-  .profileTitle::after {
+  .profileTitle::after,
+  .contactTitle::after {
     font-size: 2.2rem;
     bottom: -5rem;
   }
@@ -599,6 +660,9 @@
   .worksList__itemCategory {
     margin-bottom: 0.5rem;
   }
+  .contactButton {
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 768px) {
   .works,
@@ -610,18 +674,21 @@
   }
   .worksTitle,
   .skillsTitle,
-  .profileTitle {
+  .profileTitle,
+  .contactTitle {
     font-size: 5rem;
   }
   .worksTitle::before,
   .skillsTitle::before,
-  .profileTitle::before {
+  .profileTitle::before,
+  .contactTitle::before {
     width: 15%;
     bottom: -1.5rem;
   }
   .worksTitle::after,
   .skillsTitle::after,
-  .profileTitle::after {
+  .profileTitle::after,
+  .contactTitle::after {
     font-size: 1.8rem;
     bottom: -4.5rem;
   }
@@ -683,7 +750,8 @@
   }
   .worksTitle,
   .skillsTitle,
-  .profileTitle {
+  .profileTitle,
+  .contactTitle {
     font-size: 4rem;
   }
   .skillsTitle {
@@ -691,13 +759,15 @@
   }
   .worksTitle::before,
   .skillsTitle::before,
-  .profileTitle::before {
+  .profileTitle::before,
+  .contactTitle::before {
     width: 20%;
     bottom: -1.5rem;
   }
   .worksTitle::after,
   .skillsTitle::after,
-  .profileTitle::after {
+  .profileTitle::after,
+  .contactTitle::after {
     font-size: 1.6rem;
   }
   .worksTabs__button {
@@ -767,6 +837,8 @@
   .worksList__tagItem {
     font-size: 1.2rem;
   }
+  .contactButton {
+    font-size: 1.2rem;
+  }
 }
-
 /* ============================================================ */

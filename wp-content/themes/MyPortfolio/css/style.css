@@ -586,14 +586,17 @@
   transform: translateX(-50%);
 }
 .contactButton {
+  width: 23%;
   font-size: 1.6rem;
   display: block;
   color: #fff;
+  text-align: center;
   background-color: #088ee1;
-  padding: 1rem 4rem;
+  padding: 1.2rem 4rem;
   margin: auto;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 }
 .contactButton:hover {
   opacity: 0.7;
@@ -661,6 +664,7 @@
     margin-bottom: 0.5rem;
   }
   .contactButton {
+    width: 30%;
     font-size: 1.4rem;
   }
 }
@@ -734,6 +738,10 @@
   .worksList {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+  .contactButton {
+    font-size: 1.2rem;
+    width: 35%;
   }
 }
 @media (max-width: 480px) {
@@ -838,7 +846,8 @@
     font-size: 1.2rem;
   }
   .contactButton {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    width: 40%;
   }
 }
 /* ============================================================ */

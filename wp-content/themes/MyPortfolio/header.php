@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/header.css')); ?>" type="text/css">
   <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/footer.css')); ?>" type="text/css">
   <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/works.css')); ?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/contact.css')); ?>" type="text/css">
   <script src="<?php echo esc_url(get_theme_file_uri('/js/main.js'));?>"></script>
   <title>
     <?php 
@@ -24,16 +25,16 @@
       <nav class="headerNav">
         <ul class="headerNav__list">
           <li class="headerNav__listItem">
-            <a class="headerNav__listItem__link" href="#works">Works</a>
+            <a class="headerNav__listItem__link" href="<?php echo esc_url(home_url('/#works'));?>">Works</a>
           </li>
           <li class="headerNav__listItem">
-            <a class="headerNav__listItem__link" href="#profile">Profile</a>
+            <a class="headerNav__listItem__link" href="<?php echo esc_url(home_url('/#profile'));?>">Profile</a>
           </li>
           <li class="headerNav__listItem">
-            <a class="headerNav__listItem__link" href="#skills">Skills</a>
+            <a class="headerNav__listItem__link" href="<?php echo esc_url(home_url('/#skills'));?>">Skills</a>
           </li>
           <li class="headerNav__listItem">
-            <a class="headerNav__listItem__link" href="">Contact</a>
+            <a class="headerNav__listItem__link" href="<?php echo esc_url(home_url('/contact-page'));?>">Contact</a>
           </li>
         </ul>
       </nav>
@@ -47,16 +48,16 @@
       <nav class="hamburgerNav" id="js-hamburger-nav">
         <ul class="hamburgerNav__list">
           <li class="hamburgerNav__listItem">
-            <a class="hamburgerNav__listItem__link" href="#works">Works</a>
+            <a class="hamburgerNav__listItem__link" href="<?php echo esc_url(home_url('/#works'));?>">Works</a>
           </li>
           <li class="hamburgerNav__listItem">
-            <a class="hamburgerNav__listItem__link" href="#profile">Profile</a>
+            <a class="hamburgerNav__listItem__link" href="<?php echo esc_url(home_url('/#profile'));?>">Profile</a>
           </li>
           <li class="hamburgerNav__listItem">
-            <a class="hamburgerNav__listItem__link" href="#skills">Skills</a>
+            <a class="hamburgerNav__listItem__link" href="<?php echo esc_url(home_url('/#skills'));?>">Skills</a>
           </li>
           <li class="hamburgerNav__listItem">
-            <a class="hamburgerNav__listItem__link" href="#skills">Contact</a>
+            <a class="hamburgerNav__listItem__link" href="<?php echo esc_url(home_url('/contact-page')); ?>">Contact</a>
           </li>
         </ul>
       </nav>

@@ -54,6 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburgerNavItems.forEach(function (item) {
     item.addEventListener("click", function () {
       hamburgerNav.classList.remove("active");
+      hamburgerLineFirst.classList.remove("rotateRight");
+      hamburgerLineSecond.classList.remove("opacity");
+      hamburgerLineThird.classList.remove("rotateLeft");
     });
   });
 });

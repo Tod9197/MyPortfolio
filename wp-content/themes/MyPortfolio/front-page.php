@@ -267,7 +267,7 @@ $args_original = array(
     <div class="contactWrap">
       <div class="contactOutline">
         <h3 class="contactTitle">Contact</h3>
-        <button class="contactButton">お問い合わせはこちら</button>
+        <a href="<?php echo esc_url(home_url('/contact-page')); ?>" class="contactButton">お問い合わせはこちら</a>
       </div>
     </div>
   </div>

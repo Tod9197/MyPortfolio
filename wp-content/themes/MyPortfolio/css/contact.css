@@ -1,10 +1,10 @@
 /* ============================================================ */
-/* お問い合わせせページ */
-.mainVisual.-contact {
+/* お問い合わせページ */
+.mainVisual.-pageContact {
   height: 80vh;
   background-image: url(../img/programming-04.jpg);
 }
-.mainVisual.-contact::after {
+.mainVisual.-pageContact::after {
   background-color: #040831;
   opacity: 0.7;
   z-index: 200;
@@ -30,6 +30,89 @@
   left: 50%;
   transform: translateX(-50%);
 }
+/* お問い合わせフォーム */
+.pageContact {
+  padding: 10rem 0 10rem;
+}
+.pageContact__content {
+  width: 80%;
+  margin: auto;
+  border: 2px solid #ddd;
+  padding: 10rem 3rem;
+  border-radius: 10px;
+}
+.pageContact__contentInner {
+  width: 80%;
+  margin: auto;
+}
+.pageContact__contentName,
+.pageContact__contentEmail,
+.pageContact__contentTitle {
+  font-size: 2rem;
+}
+.pageContact__contentName span,
+.pageContact__contentEmail span,
+.pageContact__contentTitle span {
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  color: #ff0000;
+}
+.pageContact__contentInput {
+  width: 100%;
+  font-size: 2rem;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 1.5rem 0;
+  padding-left: 0.5rem;
+  margin-left: -0.2rem;
+  background: rgba(8, 142, 225, 0.1);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pageContact__contentText {
+  width: 100%;
+  font-size: 2rem;
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  margin-left: -0.2rem;
+  padding: 1rem 0;
+  padding-left: 0.5rem;
+  background: rgba(8, 142, 225, 0.1);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  resize: none;
+}
+.pageContact__contentSubmit {
+  display: block;
+  width: 25%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff6600;
+  letter-spacing: 0.1em;
+  border-radius: 6px;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.pageContact__contentSubmit:hover {
+  opacity: 0.8;
+}
+.wpcf7-response-output {
+  font-size: 1.8rem;
+  color: #ff0000;
+  padding: 0.2em 0 !important;
+  border: none !important;
+  margin-top: 0 !important;
+}
 
 @media (max-width: 1024px) {
   .pageContact__title {
@@ -38,6 +121,15 @@
   .pageContact__title::after {
     font-size: 2.4rem;
     bottom: -4rem;
+  }
+  .pageContact__content {
+    padding: 7rem 0;
+  }
+  .pageContact__contentInner {
+    width: 85%;
+  }
+  .pageContact__contentSubmit {
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 768px) {
@@ -48,13 +140,64 @@
     font-size: 2.2rem;
     bottom: -3rem;
   }
+  .pageContact__content {
+    width: 90%;
+  }
+  .pageContact__contentInner {
+    width: 90%;
+  }
+  .pageContact__contentName,
+  .pageContact__contentEmail,
+  .pageContact__contentTitle {
+    font-size: 1.6rem;
+  }
+  .pageContact__contentName span,
+  .pageContact__contentEmail span,
+  .pageContact__contentTitle span {
+    font-size: 1.2rem;
+  }
+  .pageContact__content {
+    padding: 7rem 0 4rem;
+  }
+  .pageContact__contentSubmit {
+    width: 30%;
+    font-size: 1.4rem;
+  }
+  .wpcf7-response-output {
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
 }
 @media (max-width: 480px) {
+  .pageContact {
+    padding: 5rem 0 5rem;
+  }
   .pageContact__title {
     font-size: 5rem;
   }
   .pageContact__title::after {
     font-size: 1.8rem;
     bottom: -3rem;
+  }
+  .pageContact__content {
+    width: 100%;
+    padding: 5rem 0 2rem;
+  }
+  .pageContact__contentName,
+  .pageContact__contentEmail,
+  .pageContact__contentTitle {
+    font-size: 1.4rem;
+  }
+  .pageContact__contentName span,
+  .pageContact__contentEmail span,
+  .pageContact__contentTitle span {
+    font-size: 1.1rem;
+  }
+  .pageContact__contentSubmit {
+    width: 40%;
+    font-size: 1.2rem;
+  }
+  .wpcf7-response-output {
+    font-size: 1.2rem;
   }
 }

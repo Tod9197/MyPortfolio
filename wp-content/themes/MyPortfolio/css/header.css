@@ -115,6 +115,9 @@
   .headerNav {
     display: none;
   }
+  .headerTitle {
+    font-size: 2.6rem;
+  }
   .hamburgerBtn {
     display: block;
     position: relative;
@@ -127,6 +130,9 @@
     cursor: pointer;
     margin-left: auto;
     margin-right: 2rem;
+  }
+  .hamburgerNav {
+    top: 6rem;
   }
   .hamburgerLine {
     position: absolute;
@@ -156,10 +162,6 @@
     transform: rotate(45deg);
     top: -1rem;
   }
-
-  .headerTitle {
-    font-size: 2.6rem;
-  }
   .hamburgerLine.rotateLeft {
     transform: rotate(-45deg);
     top: -1rem;
@@ -174,8 +176,26 @@
   }
 }
 @media (max-width: 480px) {
+  .header {
+    padding-top: 1rem;
+  }
   .headerTitle {
     font-size: 2.4rem;
     margin-top: 1rem;
+  }
+  .hamburgerLine {
+    width: 25px;
+  }
+  .hamburgerLine.-first {
+    top: -1.5rem;
+  }
+  .hamburgerLine.-third {
+    top: 1.5rem;
+  }
+  .hamburgerLine.rotateRight {
+    top: -0.5rem;
+  }
+  .hamburgerLine.rotateLeft {
+    top: -0.5rem;
   }
 }

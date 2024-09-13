@@ -274,12 +274,4 @@ $args_original = array(
 </section>
 <!-- Contactセクションここまで -->
 
-
-<footer class="footer">
-    <p class="footer__copyRight">&copy;<?php echo date('Y'); ?><?php bloginfo('name'); ?>
-    All rights reserved.</p>
-</footer>
-
-  <?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>

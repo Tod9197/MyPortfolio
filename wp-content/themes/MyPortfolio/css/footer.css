@@ -2,6 +2,7 @@ footer {
   width: 100%;
   padding: 3rem 0;
   background-color: #fff;
+  border-top: 2px solid #eee;
 }
 .footer__copyRight {
   font-size: 1.6rem;
@@ -16,5 +17,6 @@ footer {
 @media (max-width: 480px) {
   .footer__copyRight {
     font-size: 1.2rem;
+    line-height: 1.7;
   }
 }

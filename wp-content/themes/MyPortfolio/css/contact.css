@@ -9,6 +9,15 @@
   opacity: 0.7;
   z-index: 200;
 }
+.mainVisual.-pageContact__thanks {
+  height: 80vh;
+  background-image: url(../img/programming-04.jpg);
+}
+.mainVisual.-pageContact__thanks::after {
+  background-color: #040831;
+  opacity: 0.7;
+  z-index: 200;
+}
 .pageContact__title {
   position: relative;
   font-family: cursive;
@@ -30,11 +39,23 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.pageContact__title.-thanks::after {
+  position: absolute;
+  content: "お問い合わせ完了";
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  bottom: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* お問い合わせフォーム */
-.pageContact {
+.pageContact,
+.pageContact__thanks {
   padding: 10rem 0 10rem;
 }
-.pageContact__content {
+.pageContact__content,
+.pageContact__thanksContent {
   width: 80%;
   margin: auto;
   border: 2px solid #ddd;
@@ -96,7 +117,7 @@
   color: #fff;
   background-color: #ff6600;
   letter-spacing: 0.1em;
-  border-radius: 6px;
+  border-radius: 20px;
   margin: auto;
   margin-top: 3rem;
   padding: 1rem;
@@ -114,6 +135,36 @@
   margin-top: 0 !important;
 }
 
+/* お問い合わせ完了ページ */
+.pageContact__thanksTitle {
+  font-size: 2.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.pageContact__thanksText {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 5rem;
+}
+.pageContact__backButton {
+  display: block;
+  width: 25%;
+  font-size: 1.8rem;
+  padding: 1.2rem 2rem;
+  color: #fff;
+  background-color: #088ee1;
+  border-radius: 20px;
+  text-align: center;
+  margin: auto;
+  margin-top: 7rem;
+}
+.pageContact__backButton:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 @media (max-width: 1024px) {
   .pageContact__title {
     font-size: 8rem;
@@ -122,7 +173,8 @@
     font-size: 2.4rem;
     bottom: -4rem;
   }
-  .pageContact__content {
+  .pageContact__content,
+  .pageContact__thanksContent {
     padding: 7rem 0;
   }
   .pageContact__contentInner {
@@ -140,7 +192,8 @@
     font-size: 2.2rem;
     bottom: -3rem;
   }
-  .pageContact__content {
+  .pageContact__content,
+  .pageContact__thanksContent {
     width: 90%;
   }
   .pageContact__contentInner {
@@ -169,7 +222,8 @@
   }
 }
 @media (max-width: 480px) {
-  .pageContact {
+  .pageContact,
+  .pageContact__thanks {
     padding: 5rem 0 5rem;
   }
   .pageContact__title {
@@ -179,7 +233,8 @@
     font-size: 1.8rem;
     bottom: -3rem;
   }
-  .pageContact__content {
+  .pageContact__content,
+  .pageContact__thanksContent {
     width: 100%;
     padding: 5rem 0 2rem;
   }

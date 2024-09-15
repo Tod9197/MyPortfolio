@@ -18,7 +18,7 @@ get_header();
       <div class="worksDetail__flex">
         <div class="worksDetail__subTitlePart">
         <h3 class="worksDetail__subTitle"><?php the_title(); ?></h3>
-        <div class="worksDetail__category"><?php the_category(','); ?></div>
+        <div class="worksDetail__category"><?php the_category(' '); ?></div>
         <div class="worskDetail__linkWrap">
         <?php  
         $custom_url = get_field('custom_url'); 

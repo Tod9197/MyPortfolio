@@ -65,6 +65,8 @@
 }
 .worksDetail__category {
   margin-bottom: 4rem;
+  margin-right: 1rem;
+  letter-spacing: 0.1em;
 }
 .worksDetail__category a {
   display: inline;
@@ -124,7 +126,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 200/100;
-  object-fit: contain;
+  object-fit: cover;
   transition: all 0.3s;
 }
 .worksDetail__description {
@@ -177,6 +179,9 @@
   margin-right: 1rem;
   margin-bottom: 1rem;
   border-radius: 20px;
+}
+.worksDetail__skillsItem.-bg-black {
+  background-color: #000;
 }
 .worksDetail__skillsItem.-bg-gold {
   background-color: #ffc107;
@@ -233,6 +238,10 @@
 }
 .worksDetail__PhotosLink {
   border: 1px solid #ddd;
+}
+.worksDetail__PhotosLink img {
+  width: 100%;
+  height: 100%;
 }
 .worksDetail__PhotosLink:hover {
   opacity: 0.7;

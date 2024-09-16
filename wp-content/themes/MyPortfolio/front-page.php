@@ -2,7 +2,7 @@
 
 <!-- メインビジュアル -->
 <section class="mainVisual">
-  <h2 class="mainVisual__topTitle">My portfolio</h2>
+  <h2 class="mainVisual__topTitle">My Portfolio</h2>
 </section>
 
 <!-- 制作一覧 -->
@@ -12,10 +12,12 @@
 
   <?php $post_client_count = get_category_post_count('client-work'); ?>
   <?php $post_original_count = get_category_post_count('original-application'); ?>
+  <?php $post_originalwebiste_count = get_category_post_count('original-website'); ?>
 
   <div class="worksTabs">
     <button class="worksTabs__button" onClick="showTab('clientWorks')">実務案件 (<?php echo esc_html($post_client_count); ?>)</button>
-    <button class="worksTabs__button" onClick="showTab('orginalWorks')">オリジナル制作 (<?php echo esc_html($post_original_count); ?>)</button>
+    <button class="worksTabs__button" onClick="showTab('orginalWorks')">オリジナルアプリ (<?php echo esc_html($post_original_count); ?>)</button>
+    <button class="worksTabs__button" onClick="showTab('orginalWebSite')">オリジナルサイト (<?php echo esc_html($post_originalwebiste_count); ?>)</button>
   </div>
 
   <?php  
@@ -88,7 +90,7 @@ $args_client = array(
 </div>
 <!-- 実務案件ここまで -->
 
-<!-- オリジナル制作 -->
+<!-- オリジナルアプリ -->
 <div id="orginalWorks" class="worksTab__content -originalWorks">
 <?php  
 $args_original = array(
@@ -147,7 +149,68 @@ $args_original = array(
     </ul>
   <?php endif; ?>
 </div>
-<!-- オリジナル制作ここまで -->
+<!-- オリジナルアプリここまで -->
+
+<!-- オリジナルサイト -->
+<div id="orginalWebSite" class="worksTab__content -originalWebSite">
+<?php  
+$args_originalwebsite = array(
+    'post_type' => 'works',
+    'posts_per_page' => -1,
+    'order' => 'ASC',
+    'paged' => $paged,
+    'tax_query' => array(
+      array(
+      'taxonomy' => 'category',
+      'field' => 'slug',
+      'terms' => 'original-website',
+      ),
+    ),
+  );
+
+  $original_querysite = new WP_Query($args_originalwebsite);
+?>
+  <?php if($original_querysite->have_posts()) : ?>
+    <ul class="worksList">
+      <?php while($original_querysite->have_posts()) : $original_querysite->the_post(); ?>
+        <li class="worksList__item">
+          <a class="worksList__itemLink" href="<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer">
+            <?php if(has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail('full',array('class' => 'worksList__itemImg')); ?>
+            <?php endif; ?>
+            <p class="worksList__itemTitle"><?php the_title(); ?></p>
+            <div class="worksList__categoryFlex">
+              <?php 
+              $categories = get_the_category(); 
+              if(!empty($categories)){
+                foreach($categories as $category){
+                  echo '<span class="worksList__itemCategory">' . esc_html($category->name) . '</span>';
+                }
+              }
+              ?>
+            </div>
+            <p class="worksList__tagList">
+              <?php  
+              $tags = get_the_tags();
+              if($tags){
+                $tags_name = array();
+                foreach($tags as $tag){
+                  $tags_name[] = '<span class="worksList__tagItem">' . esc_html($tag->name) . '</span>';
+                }
+                echo implode('',$tags_name);
+              }
+              ?>
+            </p>
+            
+            <p class="worksList__itemButton">詳しく見る</p>
+          </a>
+        </li>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+    </ul>
+  <?php endif; ?>
+</div>
+<!-- オリジナルサイトここまで -->
   </div>
 </section>
 <!-- 制作一覧ここまで -->
@@ -165,7 +228,7 @@ $args_original = array(
     <div class="profileText__wrap">
       <div class="profileText__ouline">
     <p class="profileText">京都市在住。携帯電話販売スタッフ、通信会社の営業、フィリピンにある英会話スクールのスタッフなどの職歴を経て、 2020年にプログラミングの学習をスタートしました。</p>
-    <p class="profileText">2022年10月より東京にあるWeb制作会社様より断続的にお仕事をいただき、主に<span>WordPress</span>や<span>JavaScript</span>などを使用したコーディング業務に携わらせていただいています(業務委託)</p>
+    <p class="profileText">2022年10月より東京にあるWeb制作会社様より継続的にお仕事をいただき、主に<span>WordPress</span>や<span>JavaScript</span>などを使用したコーディング業務に携わらせていただいています(業務委託)</p>
     <p class="profileText">今までに<span>IT企業の自社サイトのフルリニューアル</span>、<span>土木建築会社のコーポレートサイト構築</span>といった数々のプロジェクトに入り、実務経験を積んできました。様々な経験をする中でどんどんとWebの世界にのめり込んでいき、もっとWebの世界を広く、深く知りたいと思い、2024年2月にweb開発が学べるプログラミングスクールに入学しました。
     </p>
     <p class="profileText">そこでは<span>Laravel,React,TypeScript,Next.js,GitHub,Docker</span>や<span>チーム開発</span>などよりWebの深い所を学びました。これからはフロントエンド、バックエンド、インフラと全方向に自身のスキルを伸ばしていき、関わる企業様やクライアント様の利益に貢献したいと考えております。

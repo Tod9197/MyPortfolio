@@ -182,6 +182,9 @@
 .worksTab__content.-originalWorks {
   display: none;
 }
+.worksTab__content.-originalWebSite {
+  display: none;
+}
 .worksTab__content.active {
   display: block;
 }

@@ -11,7 +11,7 @@ window.addEventListener("scroll", function () {
 
   if (this.window.scrollY >= mainVisualHeight) {
     header.style.backgroundColor = "white";
-    header.style.borderBottom = "2px solid #ddd";
+    header.style.borderBottom = "1px solid #ddd";
     headerTitle.style.color = "black";
     headerNavItems.forEach(function (item) {
       item.style.color = "black";

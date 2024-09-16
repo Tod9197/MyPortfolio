@@ -9,6 +9,12 @@
 <section class="works" id="works">
   <div class="inner">
   <h2 class="worksTitle">Works</h2>
+  <div class="worksText__wrap">
+  <p class="worksText">「<span>実務案件</span>」の項目には今まで携わらせていただいた業務でポートフォリオに掲載可能な案件を載せています。公開されているURLとGitHubのリポジトリはクライアント様に掲載許可をいただいています。
+  </p>
+  <p class="worksText">「<span>オリジナルアプリ</span>」は自身で企画・設計・実装・デプロイして公開したWebアプリを掲載しています。実際に利用できるアプリで、ユーザーの方にも使っていただいています。</p>
+  <p class="worksText">「<span>オリジナルサイト</span>」はこのポートフォリオや、スクール課題で作成した架空のサイトを掲載しています。</p>
+  </div>
 
   <?php $post_client_count = get_category_post_count('client-work'); ?>
   <?php $post_original_count = get_category_post_count('original-application'); ?>
@@ -16,8 +22,8 @@
 
   <div class="worksTabs">
     <button class="worksTabs__button" onClick="showTab('clientWorks')">実務案件 (<?php echo esc_html($post_client_count); ?>)</button>
-    <button class="worksTabs__button" onClick="showTab('orginalWorks')">オリジナルアプリ (<?php echo esc_html($post_original_count); ?>)</button>
-    <button class="worksTabs__button" onClick="showTab('orginalWebSite')">オリジナルサイト (<?php echo esc_html($post_originalwebiste_count); ?>)</button>
+    <button class="worksTabs__button" onClick="showTab('orginalWorks')">オリジナル<br class="sp-only">アプリ (<?php echo esc_html($post_original_count); ?>)</button>
+    <button class="worksTabs__button" onClick="showTab('orginalWebSite')">オリジナル<br class="sp-only">サイト (<?php echo esc_html($post_originalwebiste_count); ?>)</button>
   </div>
 
   <?php  
@@ -229,9 +235,9 @@ $args_originalwebsite = array(
       <div class="profileText__ouline">
     <p class="profileText">京都市在住。携帯電話販売スタッフ、通信会社の営業、フィリピンにある英会話スクールのスタッフなどの職歴を経て、 2020年にプログラミングの学習をスタートしました。</p>
     <p class="profileText">2022年10月より東京にあるWeb制作会社様より継続的にお仕事をいただき、主に<span>WordPress</span>や<span>JavaScript</span>などを使用したコーディング業務に携わらせていただいています(業務委託)</p>
-    <p class="profileText">今までに<span>IT企業の自社サイトのフルリニューアル</span>、<span>土木建築会社のコーポレートサイト構築</span>といった数々のプロジェクトに入り、実務経験を積んできました。様々な経験をする中でどんどんとWebの世界にのめり込んでいき、もっとWebの世界を広く、深く知りたいと思い、2024年2月にweb開発が学べるプログラミングスクールに入学しました。
+    <p class="profileText">今までに<span>IT企業の自社サイトのフルリニューアル</span>、<span>土木建築会社のコーポレートサイト構築</span>といった数々のプロジェクトに入り、実務経験を積んできました。様々な経験をする中でどんどんとWebの世界にのめり込んでいき、もっとWebの世界を広く、深く知りたいと思い、Web開発と呼ばれる分野の学習範囲を広げてました。
     </p>
-    <p class="profileText">そこでは<span>Laravel,React,TypeScript,Next.js,GitHub,Docker</span>や<span>チーム開発</span>などよりWebの深い所を学びました。これからはフロントエンド、バックエンド、インフラと全方向に自身のスキルを伸ばしていき、関わる企業様やクライアント様の利益に貢献したいと考えております。
+    <p class="profileText"><span>Laravel,React,TypeScript,Next.js,GitHub,Docker</span>などを習得してきました。個人で開発するだけではなく<span>チーム開発</span>にも携わることがあり、多くの人とコミュニュケーションを取り、周りを巻き込んで開発を進めていく楽しさ、醍醐味を日々感じています。これからはフロントエンド、バックエンド、インフラと全方向に自身のスキルを伸ばしていき、関わる企業様やクライアント様の利益に貢献したいと考えております。
     </p>
     </div>
     </div>

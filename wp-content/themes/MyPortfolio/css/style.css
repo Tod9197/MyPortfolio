@@ -10,8 +10,8 @@
 
 @media (max-width: 768px) {
   .inner {
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
   .pc-only {
     display: block;
@@ -82,7 +82,7 @@
 }
 @media (max-width: 480px) {
   .mainVisual__topTitle {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -151,6 +151,22 @@
   bottom: -6rem;
   left: 50%;
   transform: translateX(-50%);
+}
+.worksText__wrap {
+  margin-bottom: 7rem;
+}
+.worksText {
+  color: #333;
+  font-size: 1.8rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+  text-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.worksText span {
+  font-weight: bold;
+  background-color: #fffb80;
 }
 
 /* タブ切り替え */
@@ -358,6 +374,7 @@
   transform: translateX(-50%);
 }
 .skillsCategory {
+  display: block;
   background-image: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1),
@@ -405,7 +422,7 @@
 }
 .skillsList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   border-bottom: 2px solid #eee;
   margin-bottom: 5rem;
   gap: 3rem;
@@ -504,7 +521,7 @@
   opacity: 0.7;
 }
 .profileText__wrap {
-  padding: 1rem;
+  padding: 0.5rem;
   border: 2px solid #ff9933;
 }
 .profileText__ouline {
@@ -644,7 +661,6 @@
     font-size: 2.2rem;
     bottom: -5rem;
   }
-
   .profile__githubImg {
     width: 5rem;
     height: 5rem;
@@ -702,10 +718,14 @@
     bottom: -4.5rem;
   }
   .worksTitle {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
+  }
+  .worksText {
+    font-size: 1.6rem;
   }
   .worksTabs__button {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    padding: 1rem 1rem;
   }
   .worksTab__content {
     padding: 3rem 2rem 6rem 2rem;
@@ -752,7 +772,7 @@
 @media (max-width: 480px) {
   .works,
   .skills {
-    padding: 10rem 0 5rem;
+    padding: 10rem 0 0;
   }
   .skills {
     padding-bottom: 0;
@@ -765,7 +785,7 @@
   .skillsTitle,
   .profileTitle,
   .contactTitle {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .skillsTitle {
     margin-bottom: 10rem;
@@ -775,16 +795,24 @@
   .profileTitle::before,
   .contactTitle::before {
     width: 20%;
-    bottom: -1.5rem;
+    bottom: -1rem;
   }
   .worksTitle::after,
   .skillsTitle::after,
   .profileTitle::after,
   .contactTitle::after {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    bottom: -3.5rem;
+  }
+  .worksText {
+    font-size: 1.4rem;
   }
   .worksTabs__button {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    padding: 0.7rem 1.2rem 0.3rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
   .worksList__itemTitle {
     font-size: 1.6rem;
@@ -795,6 +823,9 @@
   .worksList {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
+  }
+  .profile {
+    padding: 8rem 0 5rem;
   }
   .profileTitle {
     margin-bottom: 8rem;
@@ -817,17 +848,19 @@
     padding: 0.5rem;
   }
   .profileText__ouline {
-    padding: 2rem;
+    padding: 1.5rem;
   }
   .profileText {
     font-size: 1.4rem;
   }
   .skillsCategory {
-    font-size: 2.4rem;
-    margin-bottom: 7rem;
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
   }
   .skillsCategory::after {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .skillsList {
     padding-bottom: 3rem;
@@ -837,12 +870,12 @@
     margin-bottom: 1rem;
   }
   .skillsList__itemImg {
-    width: 50px;
-    height: 50px;
-    aspect-ratio: 50/50;
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 40/40;
   }
   .skillsList__itemText {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   .worksList__itemCategory {
     font-size: 1.2rem;
@@ -850,9 +883,14 @@
   .worksList__tagItem {
     font-size: 1.2rem;
   }
+  .contactWrap {
+    width: 85%;
+    padding: 0.5rem;
+  }
   .contactButton {
     font-size: 1rem;
-    width: 40%;
+    width: 50%;
+    line-height: 1.6;
   }
 }
 /* ============================================================ */

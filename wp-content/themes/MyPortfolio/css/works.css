@@ -224,6 +224,7 @@
   font-size: 1.8rem;
   letter-spacing: 0.1em;
   color: #2e8b57;
+  text-wrap: wrap;
   margin-left: 2rem;
   margin-bottom: 2rem;
 }
@@ -319,10 +320,6 @@
   }
 }
 @media (max-width: 768px) {
-  .inner {
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
-  }
   .worksDetail__title {
     font-size: 6rem;
   }
@@ -345,6 +342,7 @@
   }
   .worksDetail__Photos {
     grid-template-columns: unset;
+    margin-bottom: 0;
   }
   .worksDetail__PhotosLink {
     margin-bottom: 2rem;
@@ -369,7 +367,8 @@
     bottom: -3rem;
   }
   .worksDetail__subTitle {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    line-height: 1.4;
   }
   .worksDetail__link,
   .worksDetail__githubLink {

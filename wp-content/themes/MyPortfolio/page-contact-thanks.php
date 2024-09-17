@@ -16,15 +16,17 @@
 <section class="pageContact__thanks">
   <div class="inner">
     <div class="pageContact__thanksContent">
+      <div class="pageContact__thanksInner">
       <h2 class="pageContact__thanksTitle">
         送信完了
       </h2>
       <p class="pageContact__thanksText">
         この度はメッセージを送信いただき誠にありがとうございます。
-        <br>
+        <br class="pc-only">
         お問い合わせいただいた内容につきましては3日以内に返信いたします。</p>
          <p class="pageContact__thanksText">※自動返信メールを送らせていただいています。</p>
         <a class="pageContact__backButton" href="<?php echo esc_url(home_url('/')); ?>">トップページへ戻る</a>
+    </div>
     </div>
     </div>
   </div>

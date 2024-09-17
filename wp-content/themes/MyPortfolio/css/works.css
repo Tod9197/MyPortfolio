@@ -87,6 +87,7 @@
   color: #088ee1;
   padding: 1rem;
   overflow: hidden;
+  line-height: 1.5;
 }
 .worksDetail__link:hover {
   opacity: 0.7;
@@ -223,10 +224,12 @@
   display: block;
   font-size: 1.8rem;
   letter-spacing: 0.1em;
+  line-height: 1.5;
   color: #2e8b57;
   text-wrap: wrap;
   margin-left: 2rem;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 .worksDetail__pageLink:hover {
   opacity: 0.7;

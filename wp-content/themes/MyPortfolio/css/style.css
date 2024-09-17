@@ -7,6 +7,9 @@
   padding-right: 1rem;
   padding-left: 1rem;
 }
+.sp-only {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .inner {
@@ -422,7 +425,7 @@
 }
 .skillsList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   border-bottom: 2px solid #eee;
   margin-bottom: 5rem;
   gap: 3rem;
@@ -863,6 +866,8 @@
     font-size: 1rem;
   }
   .skillsList {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.5rem;
     padding-bottom: 3rem;
   }
   .skillsList__item {
@@ -870,9 +875,9 @@
     margin-bottom: 1rem;
   }
   .skillsList__itemImg {
-    width: 40px;
-    height: 40px;
-    aspect-ratio: 40/40;
+    width: 35px;
+    height: 35px;
+    aspect-ratio: 35/35;
   }
   .skillsList__itemText {
     font-size: 1.2rem;
